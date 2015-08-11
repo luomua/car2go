@@ -16,8 +16,8 @@ class App < Sinatra::Application
 
   configure :production, :development do
     p 'Reloading'
-    require 'sinatra/reloader'
-    register Sinatra::Reloader
+#    require 'sinatra/reloader'
+#    register Sinatra::Reloader
     enable :logging
   end
 
