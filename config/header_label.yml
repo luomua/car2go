@@ -1,0 +1,95 @@
+---
+:chart:
+ weekdays:
+ - 星期日
+ - 星期一
+ - 星期二
+ - 星期三
+ - 星期四
+ - 星期五
+ - 星期六
+ monthdays:
+ - 1月
+ - 2月
+ - 3月
+ - 4月
+ - 5月
+ - 6月
+ - 7月
+ - 8月
+ - 9月
+ - 10月
+ - 11月
+ - 12月
+:table:
+ cardays:
+ - sTitle: 车使用率
+ - sTitle: 车号
+ - sTitle: 合计
+ - sTitle: 1月
+ - sTitle: 2月
+ - sTitle: 3月
+ - sTitle: 4月
+ - sTitle: 5月
+ - sTitle: 6月
+ - sTitle: 7月
+ - sTitle: 8月
+ - sTitle: 9月
+ - sTitle: 10月
+ - sTitle: 11月
+ - sTitle: 12月
+ cartimes:
+ - sTitle: 年出车率
+ - sTitle: 车号
+ - sTitle: 合计
+ - sTitle: 1月
+ - sTitle: 2月
+ - sTitle: 3月
+ - sTitle: 4月
+ - sTitle: 5月
+ - sTitle: 6月
+ - sTitle: 7月
+ - sTitle: 8月
+ - sTitle: 9月
+ - sTitle: 10月
+ - sTitle: 11月
+ - sTitle: 12月
+ clientdays:
+ - sTitle: 车使用率
+ - sTitle: 客户
+ - sTitle: 合计
+ - sTitle: 1月
+ - sTitle: 2月
+ - sTitle: 3月
+ - sTitle: 4月
+ - sTitle: 5月
+ - sTitle: 6月
+ - sTitle: 7月
+ - sTitle: 8月
+ - sTitle: 9月
+ - sTitle: 10月
+ - sTitle: 11月
+ - sTitle: 12月
+ clienttimes:
+ - sTitle: 年出车率
+ - sTitle: 客户
+ - sTitle: 合计
+ - sTitle: 1月
+ - sTitle: 2月
+ - sTitle: 3月
+ - sTitle: 4月
+ - sTitle: 5月
+ - sTitle: 6月
+ - sTitle: 7月
+ - sTitle: 8月
+ - sTitle: 9月
+ - sTitle: 10月
+ - sTitle: 11月
+ - sTitle: 12月
+ 24h:
+ - sTitle: 日期
+ - sTitle: 星期
+ - sTitle: 客户名称
+ - sTitle: 车号
+ - sTitle: 用时（天）
+ - sTitle: 24小时使用分布图

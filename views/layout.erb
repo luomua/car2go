@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>Car2Go</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+
+    <link rel="icon" href="./favicon.ico" type="image/ico"></link>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/ico"></link>
+
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+      body {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        background-color: #fff;
+        font-family: 'Microsoft YaHei', Arial;
+      }
+      .navbar-default {
+        background-color: #fff;
+        border-color: transparent;
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 1100px;
+      }
+      .content-info .copyright {
+        float: center;
+        text-align: center;
+      }
+      .image {
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+      }
+      .jumbotron {
+        background-color: #eef;
+      }
+      
+      .btn-circle {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+      }
+      .btn-circle.btn-lg {
+        width: 50px;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 25px;
+      }
+      .btn-circle.btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        font-size: 24px;
+        line-height: 1.33;
+        border-radius: 35px;
+      }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <%= erb(:header) %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="content-info" role="contentinfo">
+      <div class="container">
+        <hr>
+        <p class="copyright"> © 2015 W2 </p>
+      </div>
+    </footer>
+  </body>
+</html>

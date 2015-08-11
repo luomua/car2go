@@ -1,0 +1,65 @@
+<% if !session[:username].nil? %>
+  <header id="navbar-top" class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-inner"> 
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle Navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      <img class="image" src="/images/unnamed.png"> 
+      <h5 style="display: inline;"><span class="badge"><%= session[:username] %></span>&nbsp;<a href="/logout">退出</a></h5>
+        <nav class="navbar-collapse collapse  pull-right" role="navigation" style="height: 0px;">
+          <ul class="nav nav-pills">
+            <li><a href="/" title="目录"><i class="glyphicon glyphicon-th" style="font-size:28px;"></i></a></li>
+            <li><a href="/download" title="下载总数据表CSV"><i class="glyphicon glyphicon-cloud-download" style="font-size:28px;"></i></a></li>
+            <li><a href="#" data-toggle="modal" data-target="#statsModal" title="用车统计"><i class="glyphicon glyphicon-stats" style="font-size:28px;"></i></a></li>
+            <li><a href="#" data-toggle="modal" data-target="#tableModal" title="用车月报"><i class="glyphicon glyphicon-list-alt" style="font-size:28px;"></i></a></li>
+            <li><a href="/show?object=table&view=24h&group=false" title="24小时使用分布图"><i class="glyphicon glyphicon-time" style="font-size:28px;"></i></a></li>
+            <% if session[:username] == "test" %>
+              <% user_link = "/admin" %>
+              <% user_title = "用户管理" %>
+              <% user_icon = "glyphicon glyphicon-cog" %>
+              <li><a href=<%= user_link %> title=<%= user_title %>><i class="glyphicon glyphicon-user" style="font-size:28px;"></i><i class="<%= user_icon %>" style="font-size:13px;"></i></a></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+        <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="statsModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-body ">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="glyphicon glyphicon-remove"></i></button>
+                <br>
+                <br>
+                  <ul class="nav nav-pills nav-stacked">
+                    <li><a href="/show?object=chart&view=weekdays&group=false">星期使用统计</a></li>
+                    <li><a href="/show?object=chart&view=monthdays&group=false">月使用统计</a></li>
+                    <li><a href="/show?object=chart&view=cardays&group=true">车使用统计</a></li>
+                    <li><a href="/show?object=chart&view=clientdays&group=true">客户使用统计</a></li>
+                  </ul>
+               </div><!-- /.modal-body -->
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <div class="modal fade" id="tableModal" tabindex="-1" role="dialog" aria-labelledby="tableModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <div class="modal-body ">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="glyphicon glyphicon-remove"></i></button>
+                <br>
+                <br>
+                  <ul class="nav nav-pills nav-stacked">
+                    <li><a href="/show?object=table&view=cardays&group=true">每月车使用时间</a></li>
+                    <li><a href="/show?object=table&view=cartimes&group=true">每月车使用次数</a></li>
+                    <li><a href="/show?object=table&view=clientdays&group=true">每月客户使用时间</a></li>
+                    <li><a href="/show?object=table&view=clienttimes&group=true">每月客户使用次数</a></li>
+                  </ul>
+               </div><!-- /.modal-body -->
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+  </header>
+<% end %>

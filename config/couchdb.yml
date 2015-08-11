@@ -1,0 +1,15 @@
+---
+development: &defaults
+  :admindb: car2go_admin
+  :datadb: tar2go_rent
+  :designdoc: car2go
+  :csv: raw
+  :host: 127.0.0.1
+  :port: 5984
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  :datadb: car2go_rent
